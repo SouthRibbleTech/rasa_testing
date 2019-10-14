@@ -1,0 +1,49 @@
+intents:
+- greet
+- get_supplier_forecast
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- get_part_number
+- get_message
+- export_control
+entities:
+- partnumber
+slots:
+  partnumber:
+    type: text
+templates:
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_confirm_part_number:
+  - text: Thanks you asked for forecast for {partnumber} did this help?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_get_part_number:
+  - text: can you give me the part number please
+  utter_give_me_a_minute_while_i_check:
+  - text: Give me a minute while I see if I can find a forecast for {partnumber}
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- utter_cheer_up
+- utter_confirm_part_number
+- utter_did_that_help
+- utter_get_part_number
+- utter_give_me_a_minute_while_i_check
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_iamabot
+- action_get_forecast
+- action_export_control
